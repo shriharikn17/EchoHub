@@ -1,15 +1,9 @@
-import Image from "next/image";
-import Hero from "../sections/Hero";
+import './Global.css'
+import LandingPage from "../pages/LandingPage";
 export default function Home() {
   return (
     <>
-    {/* <h1>Welcome to EchoHub</h1>
-    <Header/> */}
-    <Hero/>
-    {/* <Features/>
-    <PreviewCommunities/>
-    <CTA/>
-    <Footer/> */}
+    <LandingPage/>
     </>
   );
 }
