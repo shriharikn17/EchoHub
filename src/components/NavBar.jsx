@@ -7,7 +7,7 @@ export default function NavBar() {
             <p className='logoTitle'>TribeZone</p>
         </div>
         <div className='rightSide'>
-            <button className='signUpbtn'>Join the Movement</button>
+            <button className='signUpbtn'>Join Now</button>
         </div>
 
     </header>
