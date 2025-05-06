@@ -11,16 +11,16 @@ const Footer = () => {
               <p className="footer-tagline">Find your Tribe, Own your Zone.</p>
               <div className="footer-social">
                 <a href="#" className="social-link" aria-label="Facebook">
-                  <span className="social-icon">📘</span>
+                  <span className="social-icon"></span>
                 </a>
                 <a href="#" className="social-link" aria-label="Twitter">
-                  <span className="social-icon">🐦</span>
+                  <span className="social-icon"></span>
                 </a>
                 <a href="#" className="social-link" aria-label="Instagram">
-                  <span className="social-icon">📷</span>
+                  <span className="social-icon"></span>
                 </a>
                 <a href="#" className="social-link" aria-label="LinkedIn">
-                  <span className="social-icon">💼</span>
+                  <span className="social-icon"></span>
                 </a>
               </div>
             </div>
@@ -29,7 +29,7 @@ const Footer = () => {
               <h4 className="footer-title">Navigate</h4>
               <ul className="footer-menu">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
+                
                 <li><a href="#">Communities</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>

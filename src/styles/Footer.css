@@ -127,7 +127,7 @@
   }
   
   .footer-button {
-    background-color: #3b85f3;
+    background-color: #3482F6;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -144,7 +144,7 @@
   
   /* Bottom section */
   .footer-bottom {
-    border-top: 1px solid #eaeaea;
+    /* border-top: 1px solid #eaeaea; */
     padding-top: 2rem;
     display: flex;
     flex-wrap: wrap;

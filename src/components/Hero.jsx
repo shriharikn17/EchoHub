@@ -1,7 +1,21 @@
+'use client';
 import React from 'react'
 import '../styles/Hero.css'
+ import { useRouter } from 'next/navigation';
 
 export default function Hero() {
+
+  const router = useRouter();
+
+  const handleExploreClick = () => {
+    router.push('./SignUp.jsx');
+  };
+
+
+
+
+
+
   return (
     <section className='hero'>
       <div className='heroContent'>
@@ -14,7 +28,7 @@ export default function Hero() {
           <p>and thrive in your personalized zone of belonging.</p>
         </div>
       </div>
-      <button className='signUp'>Join the Movement</button>
+      <button className='signUp' onClick={handleExploreClick}>Join the Movement</button>
       <div className='exploreTribes'>
         <p className='popularTribeTitle'>Popular Tribes</p>
         <div className='popTribescard'>
@@ -36,19 +50,19 @@ export default function Hero() {
         </div>
       </div>
       
-      <div class="how-it-works-section">
-        <h2 class="how-it-works-title">How It Works</h2>
-        <div class="how-it-works-step">
-          <div class="how-it-works-step-number">1</div>
-          <p class="how-it-works-step-text"><b>Create or Join a Community:</b> Dive into your interests! Easily create a new community around a topic you're passionate about, or explore and join existing communities filled with like-minded individuals.</p>
+      <div className="how-it-works-section">
+        <h2 className="how-it-works-title">How It Works</h2>
+        <div className="how-it-works-step">
+          <div className="how-it-works-step-number">1</div>
+          <p className="how-it-works-step-text"><b>Create or Join a Community:</b> Dive into your interests! Easily create a new community around a topic you're passionate about, or explore and join existing communities filled with like-minded individuals.</p>
         </div>
-        <div class="how-it-works-step">
-          <div class="how-it-works-step-number">2</div>
-          <p class="how-it-works-step-text"><b>Share Your Thoughts and Media:</b> Contribute to the conversation by posting text updates, sharing images, videos, links, and more. Express yourself and connect with others through engaging content.</p>
+        <div className="how-it-works-step">
+          <div className="how-it-works-step-number">2</div>
+          <p className="how-it-works-step-text"><b>Share Your Thoughts and Media:</b> Contribute to the conversation by posting text updates, sharing images, videos, links, and more. Express yourself and connect with others through engaging content.</p>
         </div>
-        <div class="how-it-works-step">
-          <div class="how-it-works-step-number">3</div>
-          <p class="how-it-works-step-text"><b>Interact and Engage:</b> Connect with fellow community members by liking, commenting on, and sharing posts. Participate in discussions, ask questions, and build meaningful connections within your chosen communities.</p>
+        <div className="how-it-works-step">
+          <div className="how-it-works-step-number">3</div>
+          <p className="how-it-works-step-text"><b>Interact and Engage:</b> Connect with fellow community members by liking, commenting on, and sharing posts. Participate in discussions, ask questions, and build meaningful connections within your chosen communities.</p>
         </div>
       </div>
 
