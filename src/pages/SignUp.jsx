@@ -1,12 +1,12 @@
 import React from 'react';
 import '../styles/SignUp.css'
-const SignUp = () => {
+export default function SignUp () {
   return (
     <div className="signup-container">
       <div className="signup-wrapper">
         <div className="signup-header">
           <h1 className="signup-title">Create Your Account</h1>
-          <p className="signup-subtitle">Join the TribeZone community and start connecting today</p>
+          <p className="signup-subtitle">Join the Tr community and start connecting today</p>
         </div>
 
         <div className="signup-form-container">
@@ -101,4 +101,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+// export default SignUp;
