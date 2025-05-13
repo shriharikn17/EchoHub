@@ -6,7 +6,7 @@ export default function SignUp () {
       <div className="signup-wrapper">
         <div className="signup-header">
           <h1 className="signup-title">Create Your Account</h1>
-          <p className="signup-subtitle">Join the Tr community and start connecting today</p>
+          <p className="signup-subtitle">Join the the community and start connecting today</p>
         </div>
 
         <div className="signup-form-container">
@@ -16,8 +16,8 @@ export default function SignUp () {
               Continue with Google
             </button>
             <button className="signup-social-button">
-              <span className="signup-social-icon">f</span>
-              Continue with Facebook
+              <span className="signup-social-icon">X</span>
+              Continue with X
             </button>
             <div className="signup-divider">
               <span className="signup-divider-text">or sign up with email</span>
