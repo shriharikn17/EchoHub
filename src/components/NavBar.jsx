@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/NavBar.css'
+import Link from 'next/link'
 export default function NavBar() {
   return (
     <header className='navBar'>
@@ -7,7 +8,7 @@ export default function NavBar() {
             <p className='logoTitle'>TribeZone</p>
         </div>
         <div className='rightSide'>
-            <button className='signUpbtn'>Join Now</button>
+            <Link className='signUpbtn' href='/signup'>Join Now</Link>
         </div>
 
     </header>

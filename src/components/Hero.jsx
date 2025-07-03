@@ -17,7 +17,7 @@ export default function Hero() {
         </div>
       </div>
       <div className='buttonContainer'>
-        <Link  className='signUp' href="/SignUp">Join the Movement</Link>
+        <Link  className='signUp' href="/signup">Join the Movement</Link>
       </div>
       
       <div className='exploreTribes'>

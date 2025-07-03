@@ -1,5 +1,5 @@
 import './Global.css'
-import LandingPage from "../pages/LandingPage";
+import LandingPage from './landing/page.jsx';
 
 export default function Home() {
   return (

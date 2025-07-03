@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/SignUp.css'
+import '../../styles/SignUp.css'
 export default function SignUp () {
   return (
     <div className="signup-container">
@@ -101,4 +101,3 @@ export default function SignUp () {
   );
 };
 
-// export default SignUp;
