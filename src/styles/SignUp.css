@@ -176,7 +176,7 @@
 }
 
 .signup-button {
-  width: 100%;
+  width: 90%;
   padding: 0.9rem;
   background-color: #3482F6;
   color: white;
@@ -186,8 +186,12 @@
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 1rem;
+ display: block;
+
+  text-decoration: none;
+  text-align: center;
+  margin-right: 2rem;
+
 }
 
 .signup-button:hover {

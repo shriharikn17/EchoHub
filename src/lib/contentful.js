@@ -10,7 +10,7 @@ export async function getTestimonials() {
   try {
     const res = await client.getEntries({
       content_type: 'tribeZoneTestimonials',
-      limit: 3,
+      limit: 9,
     });
 
     return res.items.map((item) => ({

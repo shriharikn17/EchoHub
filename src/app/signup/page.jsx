@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/SignUp.css'
+import Link from 'next/link';
 export default function SignUp () {
   return (
     <div className="signup-container">
@@ -15,10 +16,7 @@ export default function SignUp () {
               <span className="signup-social-icon">G</span>
               Continue with Google
             </button>
-            <button className="signup-social-button">
-              <span className="signup-social-icon">X</span>
-              Continue with X
-            </button>
+            
             <div className="signup-divider">
               <span className="signup-divider-text">or sign up with email</span>
             </div>
@@ -87,13 +85,13 @@ export default function SignUp () {
               </label>
             </div>
 
-            <button className="signup-button">
+            <Link className="signup-button" href='../login'>
               Create Account
-            </button>
+            </Link>
           </div>
 
           <p className="signup-login-prompt">
-            Already have an account? <a href="#" className="form-link">Log in</a>
+            Already have an account? <Link href="../login" className="form-link">Log in</Link>
           </p>
         </div>
       </div>
