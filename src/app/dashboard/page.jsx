@@ -4,6 +4,7 @@ import '../../styles/Dashboard.css';
 import Link from 'next/link';
 import { tribes } from '../mockdata';
 import DNavbar from '../../components/DNavbar';
+import Footer from '@/components/Footer';
 export default function Dashboard() {
   return (
     <>
@@ -49,6 +50,7 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
+    <Footer/>
     </>
   );
   

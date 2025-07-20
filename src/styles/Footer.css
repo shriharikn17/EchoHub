@@ -6,7 +6,9 @@
     background-color: #ffffff;
     padding: 4rem 0 2rem;
     color: #444;
-    border-radius: 5px;
+    border-radius: 10px;
+    border-top: 1px solid #eaeaea;
+    margin-top: 2rem;
  
   }
   
@@ -66,7 +68,8 @@
   }
   
   .social-icon {
-    font-size: 1.2rem;
+    font-size: 0.2rem;
+    height: 25px;
   }
   
   /* Links sections */

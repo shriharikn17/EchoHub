@@ -1,11 +1,11 @@
 
 
 export const tribes = [
-  { id: 1, name: "Quantum Computing", icon: "/resources/quantum-icon.png", description: "Explore the future of computing with quantum mechanics." },
-  { id: 2, name: "Artificial Intelligence", icon: "/resources/ai-icon.png", description: "Discuss advancements in AI and machine learning." },
-  { id: 3, name: "Music", icon: "/resources/music-icon.png", description: "Share your passion for music and discover new genres." },
-  { id: 4, name: "Space Exploration", icon: "/resources/space-icon.png", description: "Dive into the mysteries of the cosmos." },
-  { id: 5, name: "Photography", icon: "/resources/photo-icon.png", description: "Capture and share moments through the lens." }
+  { id: 1, name: "Quantum Computing", icon: "/resources/QuantumComputer.jpg", description: "Explore the future of computing with quantum mechanics." },
+  { id: 2, name: "Artificial Intelligence", icon: "/resources/ai.jpg", description: "Discuss advancements in AI and machine learning." },
+  { id: 3, name: "Music", icon: "/resources/vintdrums.jpeg", description: "Share your passion for music and discover new genres." },
+  { id: 4, name: "Space Exploration", icon: "/resources/image copy.png", description: "Dive into the mysteries of the cosmos." },
+  { id: 5, name: "Photography", icon: "/resources/image.png", description: "Capture and share moments through the lens." }
 ];
 
 export const posts = [

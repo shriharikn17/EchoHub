@@ -40,10 +40,13 @@
 }
 
 .tribe-icon {
-  width: 40px;
-  height: 40px;
+  width: 200px;
+  height: 150px;
   border-radius: 8px;
   object-fit: cover;
+}
+.tribe-info.h4{
+    font-size: 10.5rem;
 }
 
 .tribe-main {
@@ -57,7 +60,7 @@
 .tribe-title {
   font-family: 'Poppins', sans-serif;
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 450;
   color: #444;
   margin: 0 0 1.5rem;
 }

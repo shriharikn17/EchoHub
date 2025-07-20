@@ -5,6 +5,7 @@ import '../../styles/CreateTribe.css';
 import Link from 'next/link';
 import { tribes } from '../mockdata';
 import DNavbar from '../../components/DNavbar.jsx'
+import Footer from '@/components/Footer';
 
 export default function CreateTribe() {
   const [error, setError] = useState(null);
@@ -103,6 +104,7 @@ export default function CreateTribe() {
           </div>
         </main>
       </div>
+<Footer/>
     </div>
   );
 }

@@ -4,10 +4,13 @@ import '../../styles/ExploreTribes.css';
 import Link from 'next/link';
 import { tribes } from '../mockdata';
 import DNavbar from '@/components/DNavbar';
+import Footer from '@/components/Footer';
 export default function ExploreTribes() {
   return (
+    <>
+     <DNavbar/>
     <div className="explore-tribes-container">
-    <DNavbar/>
+   
       <h2 className="explore-tribes-title">Explore Tribes</h2>
       <div className="tribes-grid">
         {tribes.map(tribe => (
@@ -20,6 +23,9 @@ export default function ExploreTribes() {
           </Link>
         ))}
       </div>
+      
     </div>
+    <Footer/>
+    </>
   );
 }

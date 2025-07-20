@@ -3,16 +3,23 @@
 .create-tribe-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  
   background-color: #f5f7fa;
 }
+.create-tribe-content{
+    min-height: 85vh;
+    margin: 0;
+}
+
+
+
 
 .create-tribe-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  padding: 1rem 2rem;
+  padding: 1rem ;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -68,7 +75,7 @@
 .create-tribe-content {
   display: flex;
   flex: 1;
-  padding: 2rem;
+  padding: 0 0.5rem;
   gap: 2rem;
 }
 
@@ -81,7 +88,7 @@
 }
 
 .sidebar-section {
-  margin-bottom: 2rem;
+  margin: 0;
 }
 
 .sidebar-title {
