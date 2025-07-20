@@ -1,11 +1,7 @@
 // src/components/Testimonials.jsx
-
-import { getTestimonials } from '../lib/contentful';
 import '../styles/Testimonials.css';
 
-export default async function Testimonials() {
-  const testimonials = await getTestimonials();
-
+export default function Testimonials({ testimonials = [] }) {
   return (
     <section className="testimonials">
       <h2>Testimonials</h2>
@@ -22,8 +18,6 @@ export default async function Testimonials() {
               />
               <p className="testimonial-name">{testimonial.name}</p>
               <p className="testimonial-quote">{testimonial.quote}</p>
-             
-            
             </div>
           ))}
         </div>
