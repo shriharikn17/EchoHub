@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import '../../styles/Dashboard.css';
+import '../../styles/DashBoard.css';
 import Link from 'next/link';
 import { tribes } from '../mockdata';
 import DNavbar from '../../components/DNavbar';
