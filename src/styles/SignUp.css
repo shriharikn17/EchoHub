@@ -206,3 +206,78 @@
   margin: 1.5rem 0 0;
 }
 
+@media (max-width: 900px) {
+  .signup-wrapper {
+    max-width: 90vw;
+  }
+  .signup-form-container {
+    padding: 0 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .signup-container {
+    padding: 0.5rem;
+  }
+  .signup-wrapper {
+    max-width: 100vw;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .signup-header {
+    padding: 1.5rem 0.5rem 1rem;
+  }
+  .signup-form-container {
+    padding: 0 0.5rem 1rem;
+  }
+  .signup-title {
+    font-size: 1.2rem;
+  }
+  .signup-subtitle {
+    font-size: 0.9rem;
+  }
+  .signup-button {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .signup-container {
+    padding: 0.1rem;
+  }
+  .signup-header {
+    padding: 0.5rem 0.1rem 0.5rem;
+  }
+  .signup-title {
+    font-size: 0.9rem;
+  }
+  .signup-subtitle {
+    font-size: 0.7rem;
+  }
+  .signup-button {
+    font-size: 0.7rem;
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .signup-container {
+    padding: 0.01rem;
+  }
+  .signup-header {
+    padding: 0.2rem 0.01rem 0.2rem;
+  }
+  .signup-title {
+    font-size: 0.6rem;
+  }
+  .signup-subtitle {
+    font-size: 0.5rem;
+  }
+  .signup-button {
+    font-size: 0.5rem;
+    padding: 0.2rem;
+  }
+}
+

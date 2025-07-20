@@ -296,3 +296,61 @@
     width: 100%;
   }
 }
+
+@media (max-width: 900px) {
+  .tribe-content {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .tribe-sidebar {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  .tribe-main {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .tribe-page-container {
+    padding: 0.5rem;
+  }
+  .tribe-main {
+    padding: 0.5rem;
+  }
+  .tribe-title {
+    font-size: 1.2rem;
+  }
+  .tribe-icon {
+    width: 100px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tribe-sidebar, .tribe-main {
+    padding: 0.3rem;
+  }
+  .tribe-title {
+    font-size: 1rem;
+  }
+  .tribe-icon {
+    width: 60px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 340px) {
+  .tribe-sidebar, .tribe-main {
+    padding: 0.1rem;
+  }
+  .tribe-title {
+    font-size: 0.7rem;
+  }
+  .tribe-icon {
+    width: 30px;
+    height: 22px;
+  }
+}

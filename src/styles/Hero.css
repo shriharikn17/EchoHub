@@ -190,3 +190,120 @@
     text-align: center;
 }
 
+@media (max-width: 900px) {
+  .heroTitle {
+    font-size: 48px;
+  }
+  .heroLogo {
+    font-size: 90px;
+  }
+  .tagline {
+    font-size: 24px;
+  }
+  .popularTribeTitle {
+    font-size: 2rem;
+    margin-left: 20px;
+  }
+  .popTribescard {
+    gap: 20px;
+  }
+  .popTribecard-1,
+  .popTribecard-2,
+  .popTribecard-3 {
+    width: 200px;
+    padding: 15px;
+  }
+  .popTribecardimg {
+    height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    margin: 20px 5px 0 5px;
+    padding: 5px;
+  }
+  .heroTitle {
+    font-size: 32px;
+  }
+  .heroLogo {
+    font-size: 48px;
+  }
+  .tagline {
+    font-size: 16px;
+  }
+  .popularTribeTitle {
+    font-size: 1.2rem;
+    margin-left: 5px;
+  }
+  .popTribescard {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .popTribecard-1,
+  .popTribecard-2,
+  .popTribecard-3 {
+    width: 100%;
+    padding: 8px;
+  }
+  .popTribecardimg {
+    height: 80px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    margin: 5px 2px 0 2px;
+    padding: 2px;
+  }
+  .heroTitle {
+    font-size: 18px;
+  }
+  .heroLogo {
+    font-size: 28px;
+  }
+  .tagline {
+    font-size: 10px;
+  }
+  .popularTribeTitle {
+    font-size: 0.9rem;
+    margin-left: 2px;
+  }
+  .popTribecard-1,
+  .popTribecard-2,
+  .popTribecard-3 {
+    padding: 3px;
+  }
+  .popTribecardimg {
+    height: 40px;
+  }
+}
+
+@media (max-width: 340px) {
+  .hero {
+    margin: 2px 1px 0 1px;
+    padding: 1px;
+  }
+  .heroTitle {
+    font-size: 10px;
+  }
+  .heroLogo {
+    font-size: 16px;
+  }
+  .tagline {
+    font-size: 7px;
+  }
+  .popularTribeTitle {
+    font-size: 0.6rem;
+    margin-left: 1px;
+  }
+  .popTribecard-1,
+  .popTribecard-2,
+  .popTribecard-3 {
+    padding: 1px;
+  }
+  .popTribecardimg {
+    height: 20px;
+  }
+}
+

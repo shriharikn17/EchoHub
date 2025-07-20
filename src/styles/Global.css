@@ -1,0 +1,23 @@
+@media (max-width: 600px) {
+  body, html {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  main, .container, .main {
+    padding: 0.5rem !important;
+    width: 100vw !important;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 340px) {
+  body, html {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  main, .container, .main {
+    padding: 0.1rem !important;
+    width: 100vw !important;
+    box-sizing: border-box;
+  }
+} 
