@@ -43,7 +43,7 @@ export default function Dashboard() {
               {tribes.map(tribe => (
                 <li key={tribe.id} className="tribe-item">
                   <Link href={`/tribes/${tribe.id}`} className="tribe-link">
-                    <img src={tribe.icon} alt={tribe.name} className="tribe-icon" />
+                    <img src={tribe.icon} alt={tribe.name} className="tribe-icond" />
                     <span>{tribe.name}</span>
                   </Link>
                 </li>
