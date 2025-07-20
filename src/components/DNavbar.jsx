@@ -1,16 +1,19 @@
-import React from 'react'
+'use client';
+import React from 'react';
+import '../styles/DNavbar.css';
+import Link from 'next/link';
 
 export default function DNavbar() {
-    return (
-        <header className='navBar'>
-            <div className='leftPart'>
-                <p className='title'>TribeZone</p>
-            </div>
-            <div className='rightPart'>
-                <a  href='' className='userProfileBtn'>Profile</a>
-                <button className='logoutBtn'>Logout</button>
-            </div>
-        </header>
-
-    )
+  return (
+    <header className="navbar">
+      <div className="navbar-logo">
+        <Link href="/dashboard" className="navbar-title">TribeZone</Link>
+      </div>
+      <div className="navbar-user">
+        <img src="/resources/user-avatar.jpg" alt="User Avatar" className="user-avatar" />
+        <span className="user-name">John Doe</span>
+        <Link className="logout-button" href='/login'>Logout</Link>
+      </div>
+    </header>
+  );
 }
