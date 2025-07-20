@@ -1,16 +1,34 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/Dashboard.css';
 import Link from 'next/link';
 import { tribes } from '../mockdata';
 import DNavbar from '../../components/DNavbar';
 import Footer from '@/components/Footer';
+import { onAuthChange } from '../../lib/authService';
+import { useRouter } from 'next/navigation';
+
 export default function Dashboard() {
+  const router = useRouter();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthChange((user) => {
+      if (!user) {
+        router.push('/login');
+      } else {
+        setLoading(false);
+      }
+    });
+    return () => unsubscribe && unsubscribe();
+  }, [router]);
+
+  if (loading) return null;
+
   return (
     <>
     <DNavbar/>
     <div className="dashboard-container">
-        
       <div className="dashboard-content">
         <aside className="dashboard-sidebar">
           <div className="sidebar-section">
@@ -38,7 +56,6 @@ export default function Dashboard() {
             </Link>
           </div>
         </aside>
-
         <main className="dashboard-main">
           <h2 className="main-title">Dashboard</h2>
           <div className="main-content">
@@ -53,5 +70,4 @@ export default function Dashboard() {
     <Footer/>
     </>
   );
-  
 }

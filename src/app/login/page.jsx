@@ -2,29 +2,30 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-// Import your CSS file here - replace with your actual path
-// import './login.css';
-import '../../styles/Login.css'
+import '../../styles/Login.css';
 import Link from 'next/link';
+import { signIn, resetPassword } from '../../lib/authService';
+import { auth } from '../../firebase';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+
 const LoginPage = () => {
     const router = useRouter();
     const [formData, setFormData] = useState({
         email: '',
-        password: '',
-        rememberMe: false
+        password: ''
     });
-    
     const [errors, setErrors] = useState({});
     const [isLoading, setIsLoading] = useState(false);
+    const [showReset, setShowReset] = useState(false);
+    const [resetEmail, setResetEmail] = useState('');
+    const [resetMessage, setResetMessage] = useState('');
 
     const handleInputChange = (e) => {
-        const { name, value, type, checked } = e.target;
+        const { name, value } = e.target;
         setFormData(prev => ({
             ...prev,
-            [name]: type === 'checkbox' ? checked : value
+            [name]: value
         }));
-        
-        // Clear error when user starts typing
         if (errors[name]) {
             setErrors(prev => ({
                 ...prev,
@@ -35,47 +36,44 @@ const LoginPage = () => {
 
     const validateForm = () => {
         const newErrors = {};
-
-        // Email validation
         if (!formData.email) {
             newErrors.email = 'Email is required';
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
             newErrors.email = 'Please enter a valid email address';
         }
-
-        // Password validation
         if (!formData.password) {
             newErrors.password = 'Password is required';
         } else if (formData.password.length < 6) {
             newErrors.password = 'Password must be at least 6 characters long';
         }
-
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
         if (!validateForm()) {
             return;
         }
-
         setIsLoading(true);
-        
         try {
-            // Replace this with your actual login logic
-            console.log('Login attempt:', formData);
-            
-            // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            
-            // Handle successful login here - replace '/dashboard' with your actual path
+            await signIn(formData.email, formData.password);
             router.push('/dashboard');
-            
         } catch (error) {
-            console.error('Login error:', error);
-            setErrors({ general: 'Login failed. Please try again.' });
+            setErrors({ general: error.message || 'Login failed. Please try again.' });
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleGoogleSignIn = async () => {
+        setIsLoading(true);
+        try {
+            const provider = new GoogleAuthProvider();
+            await signInWithPopup(auth, provider);
+            router.push('/dashboard');
+        } catch (error) {
+            setErrors({ general: error.message || 'Google login failed. Please try again.' });
         } finally {
             setIsLoading(false);
         }
@@ -83,13 +81,31 @@ const LoginPage = () => {
 
     const handleForgotPassword = (e) => {
         e.preventDefault();
-        // Add your forgot password navigation - replace '/forgot-password' with your actual path
-        router.push('/forgot-password');
+        setShowReset(true);
+        setResetMessage('');
+    };
+
+    const handleResetEmailChange = (e) => {
+        setResetEmail(e.target.value);
+    };
+
+    const handleResetPassword = async (e) => {
+        e.preventDefault();
+        setResetMessage('');
+        if (!resetEmail) {
+            setResetMessage('Please enter your email address.');
+            return;
+        }
+        try {
+            await resetPassword(resetEmail);
+            setResetMessage('Password reset email sent! Check your inbox.');
+        } catch (error) {
+            setResetMessage(error.message || 'Failed to send reset email.');
+        }
     };
 
     const handleSignUp = (e) => {
         e.preventDefault();
-        // Add your sign up navigation - replace '/signup' with your actual path
         router.push('/signup');
     };
 
@@ -100,13 +116,11 @@ const LoginPage = () => {
                     <h1 className="login-title">Welcome Back</h1>
                     <p className="login-subtitle">Sign in to your account to continue</p>
                 </div>
-
                 {errors.general && (
                     <div className="error-message">
                         {errors.general}
                     </div>
                 )}
-
                 <form className="login-form" onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="email" className="form-label">
@@ -126,7 +140,6 @@ const LoginPage = () => {
                             <span className="error-message">{errors.email}</span>
                         )}
                     </div>
-
                     <div className="form-group">
                         <label htmlFor="password" className="form-label">
                             Password
@@ -145,22 +158,6 @@ const LoginPage = () => {
                             <span className="error-message">{errors.password}</span>
                         )}
                     </div>
-
-                    <div className="checkbox-group">
-                        <input
-                            type="checkbox"
-                            id="rememberMe"
-                            name="rememberMe"
-                            className="checkbox-input"
-                            checked={formData.rememberMe}
-                            onChange={handleInputChange}
-                            disabled={isLoading}
-                        />
-                        <label htmlFor="rememberMe" className="checkbox-label">
-                            Remember me
-                        </label>
-                    </div>
-
                     <button
                         type="submit"
                         className="login-button"
@@ -170,13 +167,34 @@ const LoginPage = () => {
                         {isLoading ? 'Signing In...' : 'Sign In'}
                     </button>
                 </form>
-
+                <button
+                    className="login-button google-login"
+                    onClick={handleGoogleSignIn}
+                    disabled={isLoading}
+                    style={{ marginTop: '1rem', background: '#fff', color: '#333', border: '1px solid #ccc' }}
+                >
+                    {isLoading ? 'Signing In...' : 'Sign in with Google'}
+                </button>
                 <div className="forgot-password">
                     <a href="#" onClick={handleForgotPassword}>
                         Forgot your password?
                     </a>
                 </div>
-
+                {showReset && (
+                    <form className="reset-form" onSubmit={handleResetPassword} style={{ marginTop: '1rem' }}>
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            value={resetEmail}
+                            onChange={handleResetEmailChange}
+                            className="form-input"
+                        />
+                        <button type="submit" className="login-button" style={{ marginTop: '0.5rem' }}>
+                            Send Reset Email
+                        </button>
+                        {resetMessage && <div className="error-message">{resetMessage}</div>}
+                    </form>
+                )}
                 <div className="signup-link">
                     <p>
                         Don't have an account?{' '}
