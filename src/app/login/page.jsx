@@ -1,13 +1,13 @@
 'use client';
-import React from 'react'
 
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 // Import your CSS file here - replace with your actual path
 // import './login.css';
 import '../../styles/Login.css'
 import Link from 'next/link';
-
 const LoginPage = () => {
+    const router = useRouter();
     const [formData, setFormData] = useState({
         email: '',
         password: '',
@@ -70,8 +70,8 @@ const LoginPage = () => {
             // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 2000));
             
-            // Handle successful login here
-            alert('Login successful!');
+            // Handle successful login here - replace '/dashboard' with your actual path
+            router.push('/dashboard');
             
         } catch (error) {
             console.error('Login error:', error);
@@ -83,13 +83,15 @@ const LoginPage = () => {
 
     const handleForgotPassword = (e) => {
         e.preventDefault();
-        // Add your forgot password logic here
-        console.log('Forgot password clicked');
-        alert('Forgot password functionality to be implemented');
+        // Add your forgot password navigation - replace '/forgot-password' with your actual path
+        router.push('/forgot-password');
     };
 
-    
-    
+    const handleSignUp = (e) => {
+        e.preventDefault();
+        // Add your sign up navigation - replace '/signup' with your actual path
+        router.push('/signup');
+    };
 
     return (
         <div className="login-container">
@@ -178,7 +180,7 @@ const LoginPage = () => {
                 <div className="signup-link">
                     <p>
                         Don't have an account?{' '}
-                        <Link href="../signup">
+                        <Link href="../signup" onClick={handleSignUp}>
                             Sign up here
                         </Link>
                     </p>
