@@ -1,19 +1,21 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Inter:wght@400;500&display=swap');
 
-.tribe-page-container {
+.trb-page-container {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.tribe-content {
+.trb-content {
   display: flex;
   flex: 1;
   gap: 2rem;
   padding: 2rem;
 }
 
-.tribe-sidebar {
+.trb-sidebar {
   width: 250px;
   background-color: #ffffff;
   padding: 1.5rem;
@@ -21,11 +23,11 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.sidebar-section {
+.trb-sidebar-section {
   margin-bottom: 2rem;
 }
 
-.sidebar-title {
+.trb-sidebar-title {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
@@ -33,23 +35,24 @@
   margin: 0 0 1rem;
 }
 
-.tribe-info {
+.trb-info {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.tribe-icon {
+.trb-icon {
   width: 200px;
   height: 150px;
   border-radius: 8px;
   object-fit: cover;
 }
-.tribe-info.h4{
-    font-size: 10.5rem;
+
+.trb-info h4 {
+  font-size: 10.5rem;
 }
 
-.tribe-main {
+.trb-main {
   flex: 1;
   background-color: #ffffff;
   padding: 2rem;
@@ -57,7 +60,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.tribe-title {
+.trb-title {
   font-family: 'Poppins', sans-serif;
   font-size: 1.8rem;
   font-weight: 450;
@@ -65,11 +68,11 @@
   margin: 0 0 1.5rem;
 }
 
-.create-post-section {
+.trb-create-post-section {
   margin-bottom: 2rem;
 }
 
-.create-post-title {
+.trb-create-post-title {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
@@ -77,13 +80,13 @@
   margin: 0 0 1rem;
 }
 
-.create-post-form {
+.trb-create-post-form {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.post-input {
+.trb-post-input {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   padding: 0.75rem;
@@ -93,26 +96,26 @@
   min-height: 100px;
 }
 
-.form-group {
+.trb-form-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.form-label {
+.trb-form-label {
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   color: #444;
   font-weight: 500;
 }
 
-.form-file {
+.trb-form-file {
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   padding: 0.5rem;
 }
 
-.post-button, .action-button, .comment-button {
+.trb-post-button, .trb-action-button, .trb-comment-button {
   background-color: #3482F6;
   color: white;
   font-family: 'Poppins', sans-serif;
@@ -124,23 +127,23 @@
   transition: background-color 0.3s ease;
 }
 
-.post-button:hover, .action-button:hover, .comment-button:hover {
+.trb-post-button:hover, .trb-action-button:hover, .trb-comment-button:hover {
   background-color: #2970d9;
 }
 
-.posts-list {
+.trb-posts-list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.post-card {
+.trb-post-card {
   background-color: #f9faff;
   padding: 1rem;
   border-radius: 8px;
 }
 
-.post-header {
+.trb-post-header {
   display: flex;
   justify-content: space-between;
   font-family: 'Inter', sans-serif;
@@ -149,50 +152,50 @@
   margin-bottom: 0.5rem;
 }
 
-.post-author {
+.trb-post-author {
   font-weight: 500;
 }
 
-.post-date {
+.trb-post-date {
   color: #777;
 }
 
-.post-media {
+.trb-post-media {
   margin-bottom: 0.75rem;
 }
 
-.post-image, .post-video {
+.trb-post-image, .trb-post-video {
   width: 100%;
   max-height: 400px;
   object-fit: contain;
   border-radius: 8px;
 }
 
-.post-content {
+.trb-post-content {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   color: #444;
   margin: 0 0 0.75rem;
 }
 
-.post-actions {
+.trb-post-actions {
   display: flex;
   gap: 1rem;
   align-items: center;
   margin-bottom: 0.75rem;
 }
 
-.post-likes {
+.trb-post-likes {
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   color: #555;
 }
 
-.comments-section {
+.trb-comments-section {
   margin-top: 1rem;
 }
 
-.comments-title {
+.trb-comments-title {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -200,42 +203,42 @@
   margin: 0 0 0.75rem;
 }
 
-.comments-list {
+.trb-comments-list {
   list-style: none;
   padding: 0;
   margin: 0 0 0.75rem;
 }
 
-.comment-item {
+.trb-comment-item {
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   color: #555;
   margin-bottom: 0.5rem;
 }
 
-.comment-author {
+.trb-comment-author {
   font-weight: 500;
   color: #444;
 }
 
-.comment-date {
+.trb-comment-date {
   color: #777;
 }
 
-.no-comments, .no-posts {
+.trb-no-comments, .trb-no-posts {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   color: #777;
   text-align: center;
 }
 
-.comment-form {
+.trb-comment-form {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.comment-input {
+.trb-comment-input {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   padding: 0.75rem;
@@ -245,14 +248,14 @@
   min-height: 60px;
 }
 
-.error-message {
+.trb-error-message {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   color: #dc3545;
   margin-bottom: 1rem;
 }
 
-.back-button {
+.trb-back-button {
   display: inline-block;
   font-family: 'Poppins', sans-serif;
   font-size: 0.9rem;
@@ -263,11 +266,11 @@
   transition: background-color 0.3s ease;
 }
 
-.back-button:hover {
+.trb-back-button:hover {
   background-color: #e0eeff;
 }
 
-.leave-tribe-button {
+.trb-leave-tribe-button {
   display: inline-block;
   font-family: 'Poppins', sans-serif;
   font-size: 0.9rem;
@@ -281,75 +284,75 @@
   margin-top: 0.5rem;
 }
 
-.leave-tribe-button:hover {
+.trb-leave-tribe-button:hover {
   background-color: #c82333;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .tribe-content {
+  .trb-content {
     flex-direction: column;
     padding: 1rem;
   }
 
-  .tribe-sidebar {
+  .trb-sidebar {
     width: 100%;
   }
 }
 
 @media (max-width: 900px) {
-  .tribe-content {
+  .trb-content {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
   }
-  .tribe-sidebar {
+  .trb-sidebar {
     width: 100%;
     margin-bottom: 1rem;
     padding: 1rem;
   }
-  .tribe-main {
+  .trb-main {
     padding: 1rem;
   }
 }
 
 @media (max-width: 600px) {
-  .tribe-page-container {
+  .trb-page-container {
     padding: 0.5rem;
   }
-  .tribe-main {
+  .trb-main {
     padding: 0.5rem;
   }
-  .tribe-title {
+  .trb-title {
     font-size: 1.2rem;
   }
-  .tribe-icon {
+  .trb-icon {
     width: 100px;
     height: 75px;
   }
 }
 
 @media (max-width: 400px) {
-  .tribe-sidebar, .tribe-main {
+  .trb-sidebar, .trb-main {
     padding: 0.3rem;
   }
-  .tribe-title {
+  .trb-title {
     font-size: 1rem;
   }
-  .tribe-icon {
+  .trb-icon {
     width: 60px;
     height: 45px;
   }
 }
 
 @media (max-width: 340px) {
-  .tribe-sidebar, .tribe-main {
+  .trb-sidebar, .trb-main {
     padding: 0.1rem;
   }
-  .tribe-title {
+  .trb-title {
     font-size: 0.7rem;
   }
-  .tribe-icon {
+  .trb-icon {
     width: 30px;
     height: 22px;
   }

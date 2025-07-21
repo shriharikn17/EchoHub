@@ -1,23 +1,20 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Inter:wght@400;500&display=swap');
 
-.dashboard-container {
+.db-container {
   display: flex;
   flex: 1;
   min-height: 100vh;
- 
 }
 
-.dashboard-content {
+.db-content {
   display: flex;
   flex: 1;
   gap: 2rem;
   min-height: 100vh;
-  
-
-  
 }
 
-.dashboard-sidebar {
+.db-sidebar {
   width: 250px;
   background-color: #ffffff;
   padding: 1.5rem;
@@ -25,11 +22,11 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.sidebar-section {
+.db-sidebar-section {
   margin-bottom: 2rem;
 }
 
-.sidebar-title {
+.db-sidebar-title {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
@@ -37,7 +34,7 @@
   margin: 0 0 1rem;
 }
 
-.explore-button, .create-tribe-button {
+.db-explore-button, .db-create-tribe-button {
   width: 100%;
   padding: 0.75rem;
   background-color: #3482F6;
@@ -51,17 +48,17 @@
   text-decoration: none;
 }
 
-.explore-button:hover, .create-tribe-button:hover {
+.db-explore-button:hover, .db-create-tribe-button:hover {
   background-color: #2970d9;
 }
 
-.tribe-list {
+.db-tribe-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.tribe-item {
+.db-tribe-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -72,7 +69,7 @@
   cursor: pointer;
 }
 
-.tribe-link {
+.db-tribe-link {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -81,18 +78,18 @@
   width: 100%;
 }
 
-.tribe-link:hover {
+.db-tribe-link:hover {
   color: #3482F6;
 }
 
-.tribe-icond {
+.db-tribe-icon {
   width: 24px;
   height: 24px;
   border-radius: 4px;
   object-fit: cover;
 }
 
-.dashboard-main {
+.db-main {
   flex: 1;
   background-color: #ffffff;
   padding: 2rem;
@@ -100,7 +97,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.main-title {
+.db-main-title {
   font-family: 'Poppins', sans-serif;
   font-size: 1.8rem;
   font-weight: 500;
@@ -108,13 +105,13 @@
   margin: 0 0 1.5rem;
 }
 
-.main-content {
+.db-main-content {
   font-family: 'Inter', sans-serif;
   color: #555;
   line-height: 1.6;
 }
 
-.content-placeholder {
+.db-content-placeholder {
   margin-top: 2rem;
   padding: 1rem;
   background-color: #f0f7ff;
@@ -123,7 +120,7 @@
   color: #777;
 }
 
-.error-message {
+.db-error-message {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   color: #dc3545;
@@ -132,58 +129,58 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .dashboard-content {
+  .db-content {
     flex-direction: column;
     padding: 0;
   }
 
-  .dashboard-sidebar {
+  .db-sidebar {
     width: 100%;
   }
 }
 
 @media (max-width: 900px) {
-  .dashboard-content {
+  .db-content {
     flex-direction: column;
     gap: 1rem;
     padding: 0.5rem;
   }
-  .dashboard-sidebar {
+  .db-sidebar {
     width: 100%;
     margin-bottom: 1rem;
     padding: 1rem;
   }
-  .dashboard-main {
+  .db-main {
     padding: 1rem;
   }
 }
 
 @media (max-width: 600px) {
-  .dashboard-container {
+  .db-container {
     padding: 0.5rem;
   }
-  .dashboard-main {
+  .db-main {
     padding: 0.5rem;
   }
-  .main-title {
+  .db-main-title {
     font-size: 1.2rem;
   }
 }
 
 @media (max-width: 400px) {
-  .dashboard-sidebar, .dashboard-main {
+  .db-sidebar, .db-main {
     padding: 0.3rem;
   }
-  .main-title {
+  .db-main-title {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 340px) {
-  .dashboard-sidebar, .dashboard-main {
+  .db-sidebar, .db-main {
     padding: 0.1rem;
   }
-  .main-title {
+  .db-main-title {
     font-size: 0.7rem;
   }
 }

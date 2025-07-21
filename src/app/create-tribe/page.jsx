@@ -59,48 +59,48 @@ export default function CreateTribe() {
   };
 
   return (
-    <div className="create-tribe-container">
+    <div className="crt-container">
       <DNavbar />
-      <div className="create-tribe-content">
-        <aside className="create-tribe-sidebar">
-          <div className="sidebar-section">
-            <h3 className="sidebar-title">Navigation</h3>
-            <Link href="/dashboard" className="back-button">Back to Dashboard</Link>
+      <div className="crt-content">
+        <aside className="crt-sidebar">
+          <div className="crt-sidebar-section">
+            <h3 className="crt-sidebar-title">Navigation</h3>
+            <Link href="/dashboard" className="crt-back-button">Back to Dashboard</Link>
           </div>
         </aside>
 
-        <main className="create-tribe-main">
-          <h2 className="create-tribe-title">Create a New Tribe</h2>
-          {success && <p className="success-message">{success}</p>}
-          {error && <p className="error-message">{error}</p>}
-          <div className="create-tribe-form">
-            <div className="form-group">
-              <label htmlFor="tribe-name" className="form-label">Tribe Name</label>
+        <main className="crt-main">
+          <h2 className="crt-title">Create a New Tribe</h2>
+          {success && <p className="crt-success-message">{success}</p>}
+          {error && <p className="crt-error-message">{error}</p>}
+          <div className="crt-form">
+            <div className="crt-form-group">
+              <label htmlFor="tribe-name" className="crt-form-label">Tribe Name</label>
               <input
                 type="text"
                 id="tribe-name"
-                className="form-input"
+                className="crt-form-input"
                 placeholder="Enter tribe name"
               />
             </div>
-            <div className="form-group">
-              <label htmlFor="tribe-description" className="form-label">Description</label>
+            <div className="crt-form-group">
+              <label htmlFor="tribe-description" className="crt-form-label">Description</label>
               <textarea
                 id="tribe-description"
-                className="form-textarea"
+                className="crt-form-textarea"
                 placeholder="Describe your tribe"
               ></textarea>
             </div>
-            <div className="form-group">
-              <label htmlFor="tribe-icon" className="form-label">Tribe Icon (Optional)</label>
+            <div className="crt-form-group">
+              <label htmlFor="tribe-icon" className="crt-form-label">Tribe Icon (Optional)</label>
               <input
                 type="file"
                 id="tribe-icon"
-                className="form-file"
+                className="crt-form-file"
                 accept="image/*"
               />
             </div>
-            <button className="create-button" onClick={handleCreateTribe}>Create Tribe</button>
+            <button className="crt-button" onClick={handleCreateTribe}>Create Tribe</button>
           </div>
         </main>
       </div>

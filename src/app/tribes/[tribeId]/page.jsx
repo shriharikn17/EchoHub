@@ -137,105 +137,105 @@ export default function TribePage({ params }) {
   };
 
   return (
-    <div className="tribe-page-container">
+    <div className="trb-page-container">
       <DNavbar />
-      <div className="tribe-content">
-        <aside className="tribe-sidebar">
-          <div className="sidebar-section">
-            <h3 className="sidebar-title">Tribe Info</h3>
-            <div className="tribe-info">
-              <img src={tribe.icon} alt={tribe.name} className="tribe-icon" />
+      <div className="trb-content">
+        <aside className="trb-sidebar">
+          <div className="trb-sidebar-section">
+            <h3 className="trb-sidebar-title">Tribe Info</h3>
+            <div className="trb-tribe-info">
+              <img src={tribe.icon} alt={tribe.name} className="trb-icon" />
               <h4>{tribe.name}</h4>
             </div>
           </div>
-          <div className="sidebar-section">
-            <Link href="/dashboard" className="back-button">Back to Dashboard</Link>
-            <button className="leave-tribe-button" onClick={handleLeaveTribe}>Leave Tribe</button>
+          <div className="trb-sidebar-section">
+            <Link href="/dashboard" className="trb-back-button">Back to Dashboard</Link>
+            <button className="trb-leave-tribe-button" onClick={handleLeaveTribe}>Leave Tribe</button>
           </div>
         </aside>
 
-        <main className="tribe-main">
-          <h2 className="tribe-title">{tribe.name} Posts</h2>
-          {error && <p className="error-message">{error}</p>}
-          <div className="create-post-section">
-            <h3 className="create-post-title">Create a Post</h3>
-            <div className="create-post-form">
+        <main className="trb-main">
+          <h2 className="trb-title">{tribe.name} Posts</h2>
+          {error && <p className="trb-error-message">{error}</p>}
+          <div className="trb-create-post-section">
+            <h3 className="trb-create-post-title">Create a Post</h3>
+            <div className="trb-create-post-form">
               <textarea
                 id="post-content"
-                className="post-input"
+                className="trb-post-input"
                 placeholder="Share your thoughts..."
               ></textarea>
-              <div className="form-group">
-                <label htmlFor="post-media" className="form-label">Add Photo or Video (Optional)</label>
+              <div className="trb-form-group">
+                <label htmlFor="post-media" className="trb-form-label">Add Photo or Video (Optional)</label>
                 <input
                   type="file"
                   id="post-media"
-                  className="form-file"
+                  className="trb-form-file"
                   accept="image/jpeg,image/png,image/gif,video/mp4,video/webm"
                 />
               </div>
-              <button className="post-button" onClick={handleCreatePost}>Post</button>
+              <button className="trb-post-button" onClick={handleCreatePost}>Post</button>
             </div>
           </div>
 
-          <div className="posts-list">
+          <div className="trb-posts-list">
             {tribePosts.length > 0 ? (
               tribePosts.map(post => (
-                <div key={post.id} className="post-card">
-                  <div className="post-header">
-                    <span className="post-author">{post.author}</span>
-                    <span className="post-date">{post.date}</span>
+                <div key={post.id} className="trb-post-card">
+                  <div className="trb-post-header">
+                    <span className="trb-post-author">{post.author}</span>
+                    <span className="trb-post-date">{post.date}</span>
                   </div>
                   {post.media && (
-                    <div className="post-media">
+                    <div className="trb-post-media">
                       {post.media.endsWith('.mp4') || post.media.endsWith('.webm') ? (
                         <video
                           src={post.media}
                           controls
-                          className="post-video"
+                          className="trb-post-video"
                         />
                       ) : (
                         <img
                           src={post.media}
                           alt="Post media"
-                          className="post-image"
+                          className="trb-post-image"
                         />
                       )}
                     </div>
                   )}
-                  {post.content && <p className="post-content">{post.content}</p>}
-                  <div className="post-actions">
-                    <span className="post-likes">{post.likes} Likes</span>
-                    <button className="action-button" onClick={() => handleLike(post.id)}>Like</button>
-                    <button className="action-button">Comment</button>
+                  {post.content && <p className="trb-post-content">{post.content}</p>}
+                  <div className="trb-post-actions">
+                    <span className="trb-post-likes">{post.likes} Likes</span>
+                    <button className="trb-action-button" onClick={() => handleLike(post.id)}>Like</button>
+                    <button className="trb-action-button">Comment</button>
                   </div>
-                  <div className="comments-section">
-                    <h4 className="comments-title">Comments</h4>
+                  <div className="trb-comments-section">
+                    <h4 className="trb-comments-title">Comments</h4>
                     {post.comments.length > 0 ? (
-                      <ul className="comments-list">
+                      <ul className="trb-comments-list">
                         {post.comments.map(comment => (
-                          <li key={comment.id} className="comment-item">
-                            <span className="comment-author">{comment.author}</span>: {comment.content} <span className="comment-date">({comment.date})</span>
+                          <li key={comment.id} className="trb-comment-item">
+                            <span className="trb-comment-author">{comment.author}</span>: {comment.content} <span className="comment-date">({comment.date})</span>
                           </li>
                         ))}
                       </ul>
                     ) : (
-                      <p className="no-comments">No comments yet.</p>
+                      <p className="trb-no-comments">No comments yet.</p>
                     )}
-                    <div className="comment-form">
+                    <div className="trb-comment-form">
                       <textarea
-                        className="comment-input"
+                        className="trb-comment-input"
                         placeholder="Add a comment..."
                         value={commentInputs[post.id] || ''}
                         onChange={(e) => handleCommentInputChange(post.id, e.target.value)}
                       ></textarea>
-                      <button className="comment-button" onClick={(e) => handleComment(post.id, e)}>Submit Comment</button>
+                      <button className="trb-comment-button" onClick={(e) => handleComment(post.id, e)}>Submit Comment</button>
                     </div>
                   </div>
                 </div>
               ))
             ) : (
-              <p className="no-posts">No posts yet. Be the first to share!</p>
+              <p className="trb-no-posts">No posts yet. Be the first to share!</p>
             )}
           </div>
         </main>

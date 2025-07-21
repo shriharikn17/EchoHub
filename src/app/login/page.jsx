@@ -110,92 +110,92 @@ const LoginPage = () => {
     };
 
     return (
-        <div className="login-container">
-            <div className="login-card">
-                <div className="login-header">
-                    <h1 className="login-title">Welcome Back</h1>
-                    <p className="login-subtitle">Sign in to your account to continue</p>
+        <div className="lgn-container">
+            <div className="lgn-card">
+                <div className="lgn-header">
+                    <h1 className="lgn-title">Welcome Back</h1>
+                    <p className="lgn-subtitle">Sign in to your account to continue</p>
                 </div>
                 {errors.general && (
-                    <div className="error-message">
+                    <div className="lgn-error-message">
                         {errors.general}
                     </div>
                 )}
-                <form className="login-form" onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <label htmlFor="email" className="form-label">
+                <form className="lgn-form" onSubmit={handleSubmit}>
+                    <div className="lgn-form-group">
+                        <label htmlFor="email" className="lgn-form-label">
                             Email Address
                         </label>
                         <input
                             type="email"
                             id="email"
                             name="email"
-                            className={`form-input ${errors.email ? 'error' : ''}`}
+                            className={`lgn-form-input ${errors.email ? 'error' : ''}`}
                             placeholder="Enter your email address"
                             value={formData.email}
                             onChange={handleInputChange}
                             disabled={isLoading}
                         />
                         {errors.email && (
-                            <span className="error-message">{errors.email}</span>
+                            <span className="lgn-error-message">{errors.email}</span>
                         )}
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="password" className="form-label">
+                    <div className="lgn-form-group">
+                        <label htmlFor="password" className="lgn-form-label">
                             Password
                         </label>
                         <input
                             type="password"
                             id="password"
                             name="password"
-                            className={`form-input ${errors.password ? 'error' : ''}`}
+                            className={`lgn-form-input ${errors.password ? 'error' : ''}`}
                             placeholder="Enter your password"
                             value={formData.password}
                             onChange={handleInputChange}
                             disabled={isLoading}
                         />
                         {errors.password && (
-                            <span className="error-message">{errors.password}</span>
+                            <span className="lgn-error-message">{errors.password}</span>
                         )}
                     </div>
                     <button
                         type="submit"
-                        className="login-button"
+                        className="lgn-button"
                         disabled={isLoading}
                     >
-                        {isLoading && <span className="loading-spinner"></span>}
+                        {isLoading && <span className="lgn-loading-spinner"></span>}
                         {isLoading ? 'Signing In...' : 'Sign In'}
                     </button>
                 </form>
                 <button
-                    className="login-button google-login"
+                    className="lgn-button google-login"
                     onClick={handleGoogleSignIn}
                     disabled={isLoading}
                     style={{ marginTop: '1rem', background: '#fff', color: '#333', border: '1px solid #ccc' }}
                 >
                     {isLoading ? 'Signing In...' : 'Sign in with Google'}
                 </button>
-                <div className="forgot-password">
+                <div className="lgn-forgot-password">
                     <a href="#" onClick={handleForgotPassword}>
                         Forgot your password?
                     </a>
                 </div>
                 {showReset && (
-                    <form className="reset-form" onSubmit={handleResetPassword} style={{ marginTop: '1rem' }}>
+                    <form className="lgn-reset-form" onSubmit={handleResetPassword} style={{ marginTop: '1rem' }}>
                         <input
                             type="email"
                             placeholder="Enter your email"
                             value={resetEmail}
                             onChange={handleResetEmailChange}
-                            className="form-input"
+                            className="lgn-form-input"
                         />
-                        <button type="submit" className="login-button" style={{ marginTop: '0.5rem' }}>
+                        <button type="submit" className="lgn-button" style={{ marginTop: '0.5rem' }}>
                             Send Reset Email
                         </button>
-                        {resetMessage && <div className="error-message">{resetMessage}</div>}
+                        {resetMessage && <div className="lgn-error-message">{resetMessage}</div>}
                     </form>
                 )}
-                <div className="signup-link">
+                <div className="lgn-signup-link">
                     <p>
                         Don't have an account?{' '}
                         <Link href="../signup" onClick={handleSignUp}>

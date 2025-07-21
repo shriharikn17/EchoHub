@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
@@ -5,7 +7,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
 }
 
 body {
@@ -16,7 +18,7 @@ body {
 }
 
 /* Login container */
-.login-container {
+.lgn-container {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -25,7 +27,7 @@ body {
     background-color: #f9f9f9;
 }
 
-.login-card {
+.lgn-card {
     background: white;
     padding: 3rem;
     border-radius: 16px;
@@ -36,16 +38,15 @@ body {
 }
 
 /* Headings */
-.login-title {
+.lgn-title {
     font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
     font-weight: 450;
     color: #2c2c2c;
     text-align: center;
-    
 }
 
-.login-subtitle {
+.lgn-subtitle {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     color: #666;
@@ -54,75 +55,75 @@ body {
 }
 
 /* Form styles */
-.login-form {
+.lgn-form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.form-group {
+.lgn-form-group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.form-label {
+.lgn-form-label {
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
     color: #444;
 }
 
-.form-input {
+.lgn-form-input {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     padding: 0.875rem 1rem;
     border: 1px solid #a7b1b8;
-    border-radius: 8px; 
+    border-radius: 8px;
     background-color: #fafbff;
     color: #444;
     transition: all 0.3s ease;
 }
 
-.form-input:focus {
+.lgn-form-input:focus {
     outline: none;
     border-color: #a5dbfc;
     background-color: white;
     box-shadow: 0 0 0 3px rgba(165, 180, 252, 0.1);
 }
 
-.form-input::placeholder {
+.lgn-form-input::placeholder {
     color: #9ca3af;
     font-size: 0.95rem;
 }
 
 /* Remember me checkbox */
-.checkbox-group {
+.lgn-checkbox-group {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin: 0.5rem 0;
 }
 
-.checkbox-input {
+.lgn-checkbox-input {
     width: 16px;
     height: 16px;
-    accent-color:aliceblue;
+    accent-color: aliceblue;
 }
 
-.checkbox-label {
+.lgn-checkbox-label {
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     color: #444;
 }
 
 /* Button styles */
-.login-button {
+.lgn-button {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     font-weight: 500;
     padding: 1rem;
-   background-color: #3482F6;
+    background-color: #3482F6;
     color: white;
     border: none;
     border-radius: 8px;
@@ -131,24 +132,23 @@ body {
     margin-top: 0.5rem;
 }
 
-.login-button:hover {
-   
+.lgn-button:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(165, 180, 252, 0.3);
 }
 
-.login-button:active {
+.lgn-button:active {
     transform: translateY(0);
     box-shadow: 0 2px 6px rgba(165, 180, 252, 0.2);
 }
 
 /* Links */
-.forgot-password {
+.lgn-forgot-password {
     text-align: center;
     margin-top: 1rem;
 }
 
-.forgot-password a {
+.lgn-forgot-password a {
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     color: #3482F6;
@@ -156,25 +156,25 @@ body {
     transition: color 0.3s ease;
 }
 
-.forgot-password a:hover {
+.lgn-forgot-password a:hover {
     color: #3482F6;
     text-decoration: underline;
 }
 
-.signup-link {
+.lgn-signup-link {
     text-align: center;
     margin-top: 2rem;
     padding-top: 2rem;
     border-top: 1px solid #e5e7eb;
 }
 
-.signup-link p {
+.lgn-signup-link p {
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     color: #666;
 }
 
-.signup-link a {
+.lgn-signup-link a {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     color: #3482F6;
@@ -182,13 +182,13 @@ body {
     transition: color 0.3s ease;
 }
 
-.signup-link a:hover {
+.lgn-signup-link a:hover {
     color: #3482F6;
     text-decoration: underline;
 }
 
 /* Error message */
-.error-message {
+.lgn-error-message {
     font-family: 'Inter', sans-serif;
     font-size: 0.875rem;
     color: #dc2626;
@@ -200,13 +200,13 @@ body {
 }
 
 /* Loading state */
-.login-button:disabled {
+.lgn-button:disabled {
     opacity: 0.6;
     cursor: not-allowed;
     transform: none;
 }
 
-.loading-spinner {
+.lgn-loading-spinner {
     width: 16px;
     height: 16px;
     border: 2px solid transparent;
@@ -224,68 +224,68 @@ body {
 
 /* Responsive design */
 @media (max-width: 900px) {
-  .login-card {
-    max-width: 90vw;
-    padding: 2rem;
-  }
+    .lgn-card {
+        max-width: 90vw;
+        padding: 2rem;
+    }
 }
 
 @media (max-width: 600px) {
-  .login-container {
-    padding: 0.5rem;
-  }
-  .login-card {
-    max-width: 100vw;
-    padding: 1rem;
-    border-radius: 0;
-    box-shadow: none;
-  }
-  .login-title {
-    font-size: 1.2rem;
-  }
-  .login-subtitle {
-    font-size: 0.9rem;
-  }
-  .login-button {
-    font-size: 0.9rem;
-    padding: 0.7rem;
-  }
+    .lgn-container {
+        padding: 0.5rem;
+    }
+    .lgn-card {
+        max-width: 100vw;
+        padding: 1rem;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .lgn-title {
+        font-size: 1.2rem;
+    }
+    .lgn-subtitle {
+        font-size: 0.9rem;
+    }
+    .lgn-button {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
 }
 
 @media (max-width: 400px) {
-  .login-container {
-    padding: 0.1rem;
-  }
-  .login-card {
-    padding: 0.5rem;
-  }
-  .login-title {
-    font-size: 0.9rem;
-  }
-  .login-subtitle {
-    font-size: 0.7rem;
-  }
-  .login-button {
-    font-size: 0.7rem;
-    padding: 0.4rem;
-  }
+    .lgn-container {
+        padding: 0.1rem;
+    }
+    .lgn-card {
+        padding: 0.5rem;
+    }
+    .lgn-title {
+        font-size: 0.9rem;
+    }
+    .lgn-subtitle {
+        font-size: 0.7rem;
+    }
+    .lgn-button {
+        font-size: 0.7rem;
+        padding: 0.4rem;
+    }
 }
 
 @media (max-width: 340px) {
-  .login-container {
-    padding: 0.01rem;
-  }
-  .login-card {
-    padding: 0.2rem;
-  }
-  .login-title {
-    font-size: 0.6rem;
-  }
-  .login-subtitle {
-    font-size: 0.5rem;
-  }
-  .login-button {
-    font-size: 0.5rem;
-    padding: 0.2rem;
-  }
+    .lgn-container {
+        padding: 0.01rem;
+    }
+    .lgn-card {
+        padding: 0.2rem;
+    }
+    .lgn-title {
+        font-size: 0.6rem;
+    }
+    .lgn-subtitle {
+        font-size: 0.5rem;
+    }
+    .lgn-button {
+        font-size: 0.5rem;
+        padding: 0.2rem;
+    }
 }
